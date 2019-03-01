@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Search Vehicle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="searchForm" (ngSubmit)="search()" >
+    <ion-item>
+      <ion-label>Vehicle Number</ion-label>
+      <ion-input type="text" formControlName="vechno" ></ion-input>
+      <ion-button type="submit">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-item>
+    </form>
+
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+            Vehicle Number
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            Name
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            Mobile Number
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let f of resObj">
+        <ion-col>
+          <div>
+            {{f.vechno}}
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            {{f.name}}
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            {{f.mobile}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

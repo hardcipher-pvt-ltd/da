@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addForm" (ngSubmit)="addvech()" >
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" formControlName="name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Vehicle Number</ion-label>
+      <ion-textarea type="text" formControlName="vechno"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mobile</ion-label>
+      <ion-textarea type="Number" formControlName="mobile"></ion-textarea>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label>Vehicle Type</ion-label>
+      <ion-select placeholder="Select One" formControlName="vehicle">
+        <ion-select-option value="bike">Bike</ion-select-option>
+        <ion-select-option value="car">Car</ion-select-option>
+        <ion-select-option value="cruiser">Cruiser</ion-select-option>
+        <ion-select-option value="bus">Bus</ion-select-option>
+      </ion-select>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label>Parking Area</ion-label>
+      <ion-select placeholder="Select One" >
+        <ion-select-option value="bike">Bike</ion-select-option>
+        <ion-select-option value="car">Car</ion-select-option>
+        <ion-select-option value="cruiser">Cruiser</ion-select-option>
+        <ion-select-option value="bus">Bus</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Parking Type</ion-label >
+      <ion-select placeholder="Select One" >
+        
+        <ion-select-option value="normal">Normal</ion-select-option>
+        <ion-select-option value="vip">Vip</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-button type="submit"> <ion-icon name="person-add"></ion-icon></ion-button>
+  </form>
+</ion-content>
